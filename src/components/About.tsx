@@ -11,12 +11,13 @@ const About = () => {
         <div className="divider-gold w-16 mx-auto mb-8" />
         <p className="font-body text-base md:text-lg leading-relaxed text-secondary-foreground/80">
           Sou artista plástico com mais de{" "}
-          <span className="text-primary font-semibold">5 anos transformando pele em arte</span>.
+          <span className="text-primary font-semibold">20 anos de experiência</span>{" "}
+          e há 5 anos descobri na tatuagem uma nova forma de expressar minha arte.
           Construí minha reputação em Teresópolis fazendo o que poucos tatuadores
           conseguem: capturar quem você é e traduzir isso em traço. Sou especialista
           em tatuagem feminina, mas cada sessão — independente do estilo — começa com
           escuta e termina com algo que parece que sempre esteve ali. Sua pele merece
-          alguém que a trate como obra de arte. Esse alguém sou eu.
+          alguém que a trate como obra de arte!
         </p>
       </div>
     </section>
