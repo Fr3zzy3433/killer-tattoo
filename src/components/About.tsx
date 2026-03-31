@@ -10,12 +10,13 @@ const About = () => {
         </h2>
         <div className="divider-gold w-16 mx-auto mb-8" />
         <p className="font-body text-base md:text-lg leading-relaxed text-secondary-foreground/80">
-          Artista plástico e tatuador com mais de{" "}
-          <span className="text-primary font-semibold">536 trabalhos publicados</span>,
-          Marcio é especialista em tatuagem feminina — traços delicados, arte botânica
-          e composições que valorizam o corpo como tela. Radicado em Teresópolis, RJ,
-          ele transforma referências em peças únicas com sensibilidade, técnica e
-          respeito à história de cada cliente.
+          Sou artista plástico com mais de{" "}
+          <span className="text-primary font-semibold">5 anos transformando pele em arte</span>.
+          Construí minha reputação em Teresópolis fazendo o que poucos tatuadores
+          conseguem: capturar quem você é e traduzir isso em traço. Sou especialista
+          em tatuagem feminina, mas cada sessão — independente do estilo — começa com
+          escuta e termina com algo que parece que sempre esteve ali. Sua pele merece
+          alguém que a trate como obra de arte. Esse alguém sou eu.
         </p>
       </div>
     </section>

@@ -2,16 +2,16 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Carolina Mendes",
-    text: "O Marcio tem uma sensibilidade única. Minha tattoo ficou exatamente como eu sonhava — delicada, feminina e cheia de significado.",
+    name: "Rafael Andrade",
+    text: "Mano, fui lá sem saber direito o que queria e saí com a tattoo mais linda que já vi na vida. Ele pegou a minha ideia e fez melhor do que eu imaginei 🖤",
   },
   {
-    name: "Juliana Ferreira",
-    text: "Fiz minha primeira tatuagem com ele e me senti super acolhida. O traço é impecável e o cuidado com cada detalhe é impressionante.",
+    name: "Gabriela Nunes",
+    text: "Primeira tatuagem e tava com muito medo. O Marcio foi super paciente, explicou tudo, o traço ficou perfeito. Já tô querendo a segunda kkkk",
   },
   {
-    name: "Beatriz Almeida",
-    text: "Já fiz três tattoos com o Marcio. Cada uma é uma obra de arte. Ele entende o que a gente quer antes mesmo de explicar direito.",
+    name: "Bruno Carvalho",
+    text: "Já tatuo faz anos e é raro achar artista que realmente escuta o cliente. Ele entende o que vc quer antes mesmo de vc terminar de explicar. Nota 10",
   },
 ];
 
@@ -23,7 +23,7 @@ const Testimonials = () => {
           Depoimentos
         </p>
         <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-16 text-center">
-          O que dizem nossas clientes
+          O que dizem nossos clientes
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
