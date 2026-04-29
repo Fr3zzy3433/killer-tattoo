@@ -22,14 +22,16 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-24 md:py-32 overflow-hidden bg-background">
       <div className="px-6 max-w-5xl mx-auto text-center mb-14">
-        <p className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4">
-          Portfólio
-        </p>
-        <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-5">
+        <div className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] mb-5">
+          <p className="font-body text-[11px] tracking-[0.35em] uppercase text-primary">
+            Portfólio
+          </p>
+        </div>
+        <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-5 tracking-tight">
           Trabalhos que carregam presença
         </h2>
         <p className="font-body text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          Uma vitrine de tatuagens autorais com foco em composição, intenção e acabamento.
+          Uma vitrine limpa de tatuagens autorais com foco em composição, intenção e acabamento.
         </p>
       </div>
 
@@ -41,22 +43,19 @@ const Portfolio = () => {
           {portfolioImages.map((image, index) => (
             <article
               key={image}
-              className="group relative min-w-[78vw] sm:min-w-[420px] md:min-w-[460px] h-[560px] snap-center overflow-hidden rounded-[2rem] border border-white/10 bg-card shadow-2xl"
+              className="group relative min-w-[78vw] sm:min-w-[420px] md:min-w-[460px] h-[560px] snap-center overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.03] shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-white/20"
             >
               <img
                 src={image}
                 alt={`Tatuagem autoral Killer Tattoo ${index + 1}`}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/15 to-transparent opacity-90" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <p className="font-body text-xs uppercase tracking-[0.3em] text-primary mb-3">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-white/5 opacity-80" />
+              <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/25 px-4 py-2 backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                <p className="font-body text-[10px] uppercase tracking-[0.28em] text-white/80">
                   Trabalho autoral
                 </p>
-                <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-                  Killer Tattoo #{String(index + 1).padStart(2, "0")}
-                </h3>
               </div>
             </article>
           ))}
