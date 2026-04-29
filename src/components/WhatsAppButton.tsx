@@ -1,37 +1,21 @@
 import { MessageCircle } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+
+const whatsappMessage = encodeURIComponent(
+  "Olá! Vi o site da Killer Tattoo e queria fazer uma tatuagem."
+);
+const whatsappUrl = `https://wa.me/5521990475343?text=${whatsappMessage}`;
 
 const WhatsAppButton = () => {
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <a
-            href="https://wa.me/5521990475343"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-transform duration-200 hover:scale-110"
-            style={{ backgroundColor: "#25D366" }}
-            aria-label="Chamar no WhatsApp"
-          >
-            <MessageCircle className="w-7 h-7 text-white" />
-            {/* Pulse ring */}
-            <span
-              className="absolute inset-0 rounded-full animate-[whatsapp-pulse_3s_ease-in-out_infinite]"
-              style={{ backgroundColor: "#25D366" }}
-            />
-          </a>
-        </TooltipTrigger>
-        <TooltipContent side="left" className="bg-card text-foreground border-gold">
-          <p className="font-body text-sm">Fale comigo no WhatsApp</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full border border-white/15 bg-white/[0.08] backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.12] hover:border-white/25"
+      aria-label="Chamar no WhatsApp"
+    >
+      <MessageCircle className="w-6 h-6 text-primary" />
+    </a>
   );
 };
 
