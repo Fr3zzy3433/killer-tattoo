@@ -1,49 +1,26 @@
-const portfolioItems = [
-  {
-    title: "Blackwork simbólico",
-    category: "Traço e sombra",
-    image: "/portfolio/portfolio-01.jpeg",
-  },
-  {
-    title: "Old school colorida",
-    category: "Cor e personalidade",
-    image: "/portfolio/portfolio-02.jpeg",
-  },
-  {
-    title: "Feminina floral",
-    category: "Delicadeza e composição",
-    image: "/portfolio/portfolio-03.jpeg",
-  },
-  {
-    title: "Caveira minimal",
-    category: "Preto e precisão",
-    image: "/portfolio/portfolio-04.jpeg",
-  },
-  {
-    title: "Fine line autoral",
-    category: "Leveza e detalhe",
-    image: "/portfolio/portfolio-05.jpeg",
-  },
-  {
-    title: "Botânica sombreada",
-    category: "Natureza e textura",
-    image: "/portfolio/portfolio-06.jpeg",
-  },
-  {
-    title: "Floral delicada",
-    category: "Traço fino",
-    image: "/portfolio/portfolio-07.jpeg",
-  },
-  {
-    title: "Escorpião blackwork",
-    category: "Impacto visual",
-    image: "/portfolio/portfolio-08.jpeg",
-  },
+import portfolio01 from "@/assets/portfolio/IMG_3642.jpeg";
+import portfolio02 from "@/assets/portfolio/IMG_3643.jpeg";
+import portfolio03 from "@/assets/portfolio/IMG_3644.jpeg";
+import portfolio04 from "@/assets/portfolio/IMG_3645.jpeg";
+import portfolio05 from "@/assets/portfolio/IMG_3646.jpeg";
+import portfolio06 from "@/assets/portfolio/IMG_3647.jpeg";
+import portfolio07 from "@/assets/portfolio/IMG_3648.jpeg";
+import portfolio08 from "@/assets/portfolio/IMG_3649.jpeg";
+
+const portfolioImages = [
+  portfolio01,
+  portfolio02,
+  portfolio03,
+  portfolio04,
+  portfolio05,
+  portfolio06,
+  portfolio07,
+  portfolio08,
 ];
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-24 md:py-32 overflow-hidden">
+    <section id="portfolio" className="py-24 md:py-32 overflow-hidden bg-background">
       <div className="px-6 max-w-5xl mx-auto text-center mb-14">
         <p className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4">
           Portfólio
@@ -52,33 +29,33 @@ const Portfolio = () => {
           Trabalhos que carregam presença
         </h2>
         <p className="font-body text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          Uma seleção de tatuagens autorais com foco em composição, intenção e acabamento.
+          Uma vitrine de tatuagens autorais com foco em composição, intenção e acabamento.
         </p>
       </div>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-background to-transparent" />
 
-        <div className="flex gap-5 overflow-x-auto px-6 pb-6 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {portfolioItems.map((item) => (
+        <div className="flex gap-5 overflow-x-auto px-6 pb-8 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {portfolioImages.map((image, index) => (
             <article
-              key={item.title}
+              key={image}
               className="group relative min-w-[78vw] sm:min-w-[420px] md:min-w-[460px] h-[560px] snap-center overflow-hidden rounded-[2rem] border border-white/10 bg-card shadow-2xl"
             >
               <img
-                src={item.image}
-                alt={`${item.title} - ${item.category}`}
+                src={image}
+                alt={`Tatuagem autoral Killer Tattoo ${index + 1}`}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/15 to-transparent opacity-90" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                 <p className="font-body text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  {item.category}
+                  Trabalho autoral
                 </p>
                 <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-                  {item.title}
+                  Killer Tattoo #{String(index + 1).padStart(2, "0")}
                 </h3>
               </div>
             </article>
