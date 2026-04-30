@@ -1,4 +1,4 @@
-import { Flower2, Hexagon, CircleDot } from "lucide-react";
+import { CircleDot, Flower2, Hexagon } from "lucide-react";
 
 const specialties = [
   {
@@ -20,26 +20,28 @@ const specialties = [
 
 const Specialties = () => {
   return (
-    <section id="specialties" className="py-24 md:py-32 px-6 bg-secondary/30">
-      <div className="max-w-5xl mx-auto">
-        <p className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4 text-center">
+    <section id="specialties" className="relative px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-4 text-center font-body text-xs uppercase tracking-[0.4em] text-primary">
           Especialidades
         </p>
-        <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-16 text-center">
+        <h2 className="mb-16 text-center font-display text-3xl font-semibold text-foreground md:text-5xl">
           O que fazemos
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {specialties.map((item) => (
             <div
               key={item.title}
-              className="group bg-card border border-gold rounded-sm p-8 md:p-10 text-center hover:border-primary/50 transition-colors duration-500"
+              className="liquid-glass group relative rounded-[1.75rem] p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-primary/35 md:p-10"
             >
-              <item.icon className="w-8 h-8 text-primary mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3">
+              <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 text-primary shadow-[0_18px_40px_rgba(219,164,54,0.14)] transition-transform duration-300 group-hover:scale-105">
+                <item.icon className="h-8 w-8" />
+              </div>
+              <h3 className="relative z-10 mb-3 font-display text-xl font-semibold text-foreground md:text-2xl">
                 {item.title}
               </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              <p className="relative z-10 font-body text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
             </div>
